@@ -15,3 +15,21 @@ def log_mood():
         "comment": note,
         "date": date   
     }
+
+import json
+import os
+
+def save_mood_to_file(entry, filename="moods.json"):
+    if os.path.exists(filename):
+        with open(filename, "r") as file:
+            try:
+                data = json.load(file)
+            except json.JSONDecodeError:
+                data = []
+    else:
+        data = []
+
+    data.append(entry)
+
+    with open(filename, "w") as file:
+        json.dump(data, file, indent=4)
