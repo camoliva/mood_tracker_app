@@ -7,7 +7,7 @@ class TestLogMood(unittest.TestCase):
     def test_log_mood_valid(self, mock_input):
         mood_entry = log_mood()
         self.assertEqual(mood_entry['rating'], 4)
-        self.assertEqual(mood_entry['comment'], 'Feeling good')
+        self.assertEqual(mood_entry['note'], 'Feeling good')
         self.assertIn('date', mood_entry)
 
 if __name__ == '__main__':

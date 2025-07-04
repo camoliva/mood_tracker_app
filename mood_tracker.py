@@ -7,12 +7,12 @@ from datetime import datetime
 
 def log_mood():
     rating = int(input("How are you feeling today? (1-5): "))
-    note = input("Any comments? ")
+    note = input("Any comments? ") or ""
     date = datetime.now().strftime("%Y-%m-%d")
 
     return {
         "rating": rating,
-        "comment": note,
+        "note": note,
         "date": date   
     }
 
@@ -38,11 +38,12 @@ def view_moods(filename="moods.json"):
     try:
         with open(filename, "r") as file:
             moods = json.load(file)
-    except (FileNotFoundError, json.JSONDecoderError):
+    except (FileNotFoundError, json.JSONDecodeError):
+
         moods = []
 
     for entry in moods:
-        print(f"{entry[ ' date' ]}: Rating {entry[ 'rating' ]} - {entry[ ' note ' ]}")
+        print(f"{entry.get('date', 'N/A')}: Rating {entry.get('rating', 'N/A')} - {entry.get('note', '')}")
     return moods
        
 def get_user_choice():

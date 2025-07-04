@@ -3,5 +3,10 @@
         "rating": 4,
         "comment": "Feeling good, getting this assignment done finally",
         "date": "2025-07-04"
+    },
+    {
+        "rating": 5,
+        "note": "Fixed the note bug ",
+        "date": "2025-07-04"
     }
 ]
