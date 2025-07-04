@@ -33,3 +33,15 @@ def save_mood_to_file(entry, filename="moods.json"):
 
     with open(filename, "w") as file:
         json.dump(data, file, indent=4)
+
+def view_moods(filename="moods.json"):
+    try:
+        with open(filename, "r") as file:
+            moods = json.load(file)
+    except (FileNotFoundError, json.JSONDecoderError):
+        moods = []
+
+    for entry in moods:
+        print(f"{entry[ ' date' ]}: Rating {entry[ 'rating' ]} - {entry[ ' note ' ]}")
+    return moods
+       
