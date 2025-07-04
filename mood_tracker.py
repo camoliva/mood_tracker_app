@@ -1,4 +1,4 @@
-print ("Welcome to the Mood Tracker!")
+print ("Hello and Welcome to the Mood Tracker App!")
 
 def validate_rating(rating):
     return 1 <= rating <= 5
@@ -45,3 +45,16 @@ def view_moods(filename="moods.json"):
         print(f"{entry[ ' date' ]}: Rating {entry[ 'rating' ]} - {entry[ ' note ' ]}")
     return moods
        
+def get_user_choice():
+    while True:
+        print("\nWhat would you like to do?")
+        print("1. Log a mood")
+        print("2. View mood history")
+        print("3. Exit app")
+
+        choice = input("Enter your choice (1-3): ").strip()
+
+        if choice in ["1", "2", "3"]:
+            return choice
+        else:
+            print("Invalid input. Please choose 1,2 or 3.")
