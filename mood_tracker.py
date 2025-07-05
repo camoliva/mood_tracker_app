@@ -51,14 +51,15 @@ def get_user_choice():
         print("\nWhat would you like to do?")
         print("1. Log a mood")
         print("2. View mood history")
-        print("3. Exit app")
+        print("3. Show mood summary")
+        print("4. Exit app")
 
-        choice = input("Enter your choice (1-3): ").strip()
+        choice = input("Enter your choice (1-4): ").strip()
 
-        if choice in ["1", "2", "3"]:
+        if choice in ["1", "2", "3", "4"]:
             return choice
         else:
-            print("Invalid input. Please choose 1,2 or 3.")
+            print("Invalid input. Please choose 1,2,3 or 4.")
 
 def show_mood_summary(filename="moods.json"):
     try:

@@ -1,4 +1,4 @@
-from mood_tracker import log_mood, save_mood_to_file, view_moods, get_user_choice, get_user_name
+from mood_tracker import log_mood, save_mood_to_file, view_moods, get_user_choice, get_user_name, show_mood_summary
 
 
 def main():
@@ -16,6 +16,9 @@ def main():
             print("\nMood History:")
             view_moods()
         elif choice == "3":
+            print("\nMood Summary:")
+            show_mood_summary()
+        elif choice == "4":
             print("Thanks for using the Mood tracker App, have a great day!")
             break
 if __name__ == "__main__":
