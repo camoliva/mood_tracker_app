@@ -23,6 +23,13 @@ class TestViewMoods(unittest.TestCase):
             self.assertEqual(moods[0]["note"], "Could be better")
             self.assertEqual(moods[1]["rating"], 5)
 
+        def test_view_moods_handles_empty_file(self):
+            with open(self.test_file, "w") as f:
+                f.write("")
+
+            result = view_moods(self.test_file)
+            self.assertEqual(result, [])
+
 if __name__ == '__main__':
     unittest.main()
 
