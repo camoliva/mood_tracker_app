@@ -82,8 +82,6 @@ def show_mood_summary(filename="moods.json"):
     print("\nMood Summary:")
     print(f"Total entries: {len(ratings)}")
     print(f"Average rating: {average:.1f}")
-    print(f"Best day: {highest}")
-    print(f"Worst day: {lowest}")
 
     return {
         "total": len(ratings),

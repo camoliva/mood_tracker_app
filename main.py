@@ -33,7 +33,7 @@ def main():
             show_mood_summary()
 
         elif choice == "4":
-            print("Thanks for using the Mood tracker App, have a great day {name}!")
+            print(f"Thanks for using the Mood tracker App, have a great day {name}!")
             break
 
 if __name__ == "__main__":
