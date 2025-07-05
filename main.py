@@ -1,6 +1,10 @@
-from mood_tracker import log_mood, save_mood_to_file, view_moods, get_user_choice
+from mood_tracker import log_mood, save_mood_to_file, view_moods, get_user_choice, get_user_name
+
 
 def main():
+    name = get_user_name()
+    print(f"Welcome to the Mood Tracker App, {name}!")
+
     while True:
         choice = get_user_choice()
 

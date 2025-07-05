@@ -92,3 +92,13 @@ def show_mood_summary(filename="moods.json"):
         "highest": highest,
         "lowest": lowest
     }
+
+def get_user_name(filename="user.json"):
+    if os.path.exists(filename):
+        with open(filename, "r") as f:
+            return json.load(f).get("name", "user")
+    else:
+        name = input( "Hello! What is your name? ")
+        with open(filename, "w") as f:
+            json.dump({"name": name}, f)
+        return name
