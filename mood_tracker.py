@@ -70,8 +70,6 @@ def show_mood_summary(filename="moods.json"):
         return {
             "total": 0,
             "average": 0,
-            "highest": None,
-            "lowest": None
         }   
     
     ratings = [entry.get("rating", 0) for entry in moods]
@@ -86,8 +84,6 @@ def show_mood_summary(filename="moods.json"):
     return {
         "total": len(ratings),
         "average": average,
-        "highest": highest,
-        "lowest": lowest
     }
 
 def get_user_name(filename="user.json"):
