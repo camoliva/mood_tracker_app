@@ -1,5 +1,3 @@
-print ("Hello and Welcome to the Mood Tracker App!")
-
 def validate_rating(rating):
     return 1 <= rating <= 5
 
@@ -7,7 +5,7 @@ from datetime import datetime
 
 def log_mood():
     rating = int(input("How are you feeling today? (1-5): "))
-    note = input("Any comments? ") or ""
+    note = input("Why do you feel this way? ") or ""
     date = datetime.now().strftime("%Y-%m-%d")
 
     return {
