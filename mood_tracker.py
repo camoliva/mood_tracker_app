@@ -59,3 +59,36 @@ def get_user_choice():
             return choice
         else:
             print("Invalid input. Please choose 1,2 or 3.")
+
+def show_mood_summary(filename="moods.json"):
+    try:
+        with open(filename, "r") as file:
+            moods = json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        moods = []
+
+    if not moods:
+        return {
+            "total": 0,
+            "average": 0,
+            "highest": None,
+            "lowest": None
+        }   
+    
+    ratings = [entry.get("rating", 0) for entry in moods]
+    average = sum(ratings) / len(ratings)
+    highest = max(ratings)
+    lowest = min(ratings)   
+
+    print("\nMood Summary:")
+    print(f"Total entries: {len(ratings)}")
+    print(f"Average rating: {average:.1f}")
+    print(f"Best day: {highest}")
+    print(f"Worst day: {lowest}")
+
+    return {
+        "total": len(ratings),
+        "average": average,
+        "highest": highest,
+        "lowest": lowest
+    }
