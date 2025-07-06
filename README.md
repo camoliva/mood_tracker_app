@@ -1,12 +1,11 @@
-# MOOD TRACKER APP
+# WELCOME TO THE MOOD TRACKER APP
+A terminal based mood tracking app built in Python. 
 
-A terminal-based mood tracking app built in Python.  
-This CLI tool helps users log daily moods, leave personal notes, view past entries, and see emotional trends.
-
+This project began as a way to practice version control and test driven development, but it quickly grew into something more meaningful. I wanted to create a simple tool that encourages daily reflection and mental check ins without the complexity of larger apps. Logging your mood even in a small way can offer surprising insight over time and building this app reminded me how powerful even the simplest software can be.
 
 ## Features
 
-- Log your mood with a rating from 1–5
+- Log your mood with a rating from 1-5
 - Optional personal note for each entry
 - Date added automatically
 - View full mood history
@@ -14,7 +13,7 @@ This CLI tool helps users log daily moods, leave personal notes, view past entri
 - Personalised welcome message (saved across sessions)
 - Styled CLI using the `rich` library
 - Error handling for empty files or bad inputs
-- Built using a Test-Driven Development (TDD) approach
+- Built using a Test-Driven Development
 - Includes unit tests
 
 
@@ -43,16 +42,15 @@ venv\Scripts\activate  # Windows
 
 pip install -r requirements.txt
 
-## run the app
+## Run the app
 
 python main.py
 
-
 ## Security & Dependencies
 
-This app uses only one third-party dependency:
+This app uses only one third party dependency:
 
-rich — License: MIT
+rich - License: MIT
 https://github.com/Textualize/rich
 
 Security impact:
@@ -60,10 +58,10 @@ The rich library is used solely for formatting terminal output. It does not proc
 
 ## License
 
-This project is licensed under the MIT License — see the LICENSE file for details: 
+This project is licensed under the MIT License see the LICENSE file for details: 
 
 ## Author
 
 Cameron Oliva
-Built for: ISK1001 – Industry Skills I
+Built for: ISK1001 Industry Skills I
 Assessment 2: Version Control & Software Testing Reflection
