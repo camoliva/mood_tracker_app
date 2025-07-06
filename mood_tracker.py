@@ -1,11 +1,17 @@
+from rich import print
+
 def validate_rating(rating):
     return 1 <= rating <= 5
 
 from datetime import datetime
 
 def log_mood():
-    rating = int(input("How are you feeling today? (1-5): "))
-    note = input("Why do you feel this way? ") or ""
+    print("[bold cyan]How are you feeling today? (1–5):[/bold cyan]")
+    rating = int(input(">> "))
+
+    print("[bold magenta]Why do you feel this way?[/bold magenta]")
+    note = input(">> ")
+
     date = datetime.now().strftime("%Y-%m-%d")
 
     return {
@@ -46,18 +52,19 @@ def view_moods(filename="moods.json"):
        
 def get_user_choice():
     while True:
-        print("\nWhat would you like to do?")
-        print("1. Log a mood")
-        print("2. View mood history")
-        print("3. Show mood summary")
-        print("4. Exit app")
+        print("-----[bold cyan] What would you like to do?[/bold cyan]-----")
+        print("[bold blue]1.[/bold blue] [green]Log a mood[/green]")
+        print("[bold blue]2.[/bold blue] [purple]View mood history[/purple]")
+        print("[bold blue]3.[/bold blue] [orange1]View mood summary[/orange1]")
+        print("[bold blue]4.[/bold blue] [red]Exit app[/red]")
 
-        choice = input("Enter your choice (1-4): ").strip()
+        print("[bold yellow]Enter your choice (1–4):[/bold yellow]")
+        choice = input(">> ").strip()
 
         if choice in ["1", "2", "3", "4"]:
             return choice
         else:
-            print("Invalid input. Please choose 1,2,3 or 4.")
+            print("[bold red] Invalid input. Please choose 1,2,3 or 4.[/bold red]")
 
 def show_mood_summary(filename="moods.json"):
     try:
@@ -73,13 +80,11 @@ def show_mood_summary(filename="moods.json"):
         }   
     
     ratings = [entry.get("rating", 0) for entry in moods]
-    average = sum(ratings) / len(ratings)
-    highest = max(ratings)
-    lowest = min(ratings)   
+    average = sum(ratings) / len(ratings)  
 
-    print("\nMood Summary:")
-    print(f"Total entries: {len(ratings)}")
-    print(f"Average rating: {average:.1f}")
+    print("\n[bold cyan]Mood Summary:[/bold cyan]")
+    print(f"[green]Total entries:[/green] {len(ratings)}")
+    print(f"[orange1]Average rating:[/orange1] {average:.1f}")
 
     return {
         "total": len(ratings),

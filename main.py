@@ -1,3 +1,4 @@
+from rich import print
 from mood_tracker import (
     get_user_name,
     log_mood,
@@ -6,7 +7,6 @@ from mood_tracker import (
     get_user_choice,
     show_mood_summary,
 )
-
 
 def main():
     name = get_user_name()
@@ -20,7 +20,7 @@ def main():
             print("\n Lets start")
             entry = log_mood()
             save_mood_to_file(entry)
-            print("Mood logged successfully!")
+            print("[bold green]Mood logged successfully![/bold green]")
 
         elif choice == "2":
             print("\nMood History:")
@@ -33,7 +33,7 @@ def main():
             show_mood_summary()
 
         elif choice == "4":
-            print(f"Thanks for using the Mood tracker App, have a great day {name}!")
+            print(f"[bold purple]Thanks for using the Mood Tracker App, {name}! Have a great day![/bold purple]")
             break
 
 if __name__ == "__main__":

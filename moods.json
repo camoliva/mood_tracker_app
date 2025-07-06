@@ -28,5 +28,20 @@
         "rating": 3,
         "note": "im tired",
         "date": "2025-07-06"
+    },
+    {
+        "rating": 3,
+        "note": "tires",
+        "date": "2025-07-06"
+    },
+    {
+        "rating": 4,
+        "note": "almost done this assignment",
+        "date": "2025-07-06"
+    },
+    {
+        "rating": 4,
+        "note": "more testing",
+        "date": "2025-07-06"
     }
 ]
