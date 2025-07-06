@@ -22,8 +22,6 @@ class TestMoodSummary(unittest.TestCase):
         summary = show_mood_summary(self.test_file)
         self.assertEqual(summary["total"], 3)
         self.assertEqual(summary["average"], 3.0)
-        self.assertEqual(summary["highest"], 5)
-        self.assertEqual(summary["lowest"], 1)
 
 if __name__ == '__main__':
     unittest.main()

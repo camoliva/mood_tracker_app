@@ -1,4 +1,5 @@
 # WELCOME TO THE MOOD TRACKER APP
+
 A terminal based mood tracking app built in Python. 
 
 This project began as a way to practice version control and test driven development, but it quickly grew into something more meaningful. I wanted to create a simple tool that encourages daily reflection and mental check ins without the complexity of larger apps. Logging your mood even in a small way can offer surprising insight over time and building this app reminded me how powerful even the simplest software can be.

@@ -6,7 +6,7 @@ def validate_rating(rating):
 from datetime import datetime
 
 def log_mood():
-    print("[bold cyan]How are you feeling today? (1–5):[/bold cyan]")
+    print("[bold cyan]How are you feeling today? (1-5):[/bold cyan]")
     rating = int(input(">> "))
 
     print("[bold magenta]Why do you feel this way?[/bold magenta]")
@@ -58,7 +58,7 @@ def get_user_choice():
         print("[bold blue]3.[/bold blue] [orange1]View mood summary[/orange1]")
         print("[bold blue]4.[/bold blue] [red]Exit app[/red]")
 
-        print("[bold yellow]Enter your choice (1–4):[/bold yellow]")
+        print("[bold yellow]Enter your choice (1-4):[/bold yellow]")
         choice = input(">> ").strip()
 
         if choice in ["1", "2", "3", "4"]:
