@@ -8,7 +8,7 @@ This CLI tool helps users log daily moods, leave personal notes, view past entri
 
 - Log your mood with a rating from 1–5
 - Optional personal note for each entry
-- Timestamp added automatically
+- Date added automatically
 - View full mood history
 - Summary of average mood
 - Personalised welcome message (saved across sessions)
@@ -27,7 +27,7 @@ This CLI tool helps users log daily moods, leave personal notes, view past entri
 
 ## Getting Started
 
-### Clone the repository:
+## Clone the repository:
 
 git clone https://github.com/camoliva/mood_tracker_app.git
 cd mood_tracker_app
@@ -36,14 +36,14 @@ cd mood_tracker_app
 
 python3 -m venv venv
 source venv/bin/activate  # macOS/Linux
-# OR
+### OR
 venv\Scripts\activate  # Windows
 
-# Install required packages:
+## Install required packages:
 
 pip install -r requirements.txt
 
-# run the app
+## run the app
 
 python main.py
 
@@ -58,11 +58,11 @@ https://github.com/Textualize/rich
 Security impact:
 The rich library is used solely for formatting terminal output. It does not process user data, run external scripts, or affect system-level operations. Its use presents minimal risk in the context of this CLI tool.
 
-##License
+## License
 
 This project is licensed under the MIT License — see the LICENSE file for details: 
 
-##Author
+## Author
 
 Cameron Oliva
 Built for: ISK1001 – Industry Skills I
